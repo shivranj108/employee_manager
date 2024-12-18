@@ -2,10 +2,10 @@ employee = []
 
 # Acyuta, 1324, CEO, $7,000,000, 20 years
 
-print("Add employee - 1\nRemove employee - 2\nChange role - 3\nChange salary - 4\nExit - 5")
+print("Add employee - 1\nRemove employee - 2\nChange role - 3\nChange salary - 4\nPrint list - 5\nExit - 6")
 n = input('| ')
 
-while n!='5':
+while n!='6':
   if n=='1':
     n = int(input("How many employees do you want to add? \n| "))
   
@@ -18,23 +18,41 @@ while n!='5':
       reg_num = input('Please enter the employee\'s registration number \n| ')
       role = input('Please enter the employee\'s role \n| ')
       sal = input('Please enter the employee\'s salary \n| ')
-      exp = input('Please enter the number of years of experience \n1| ')
+      exp = input('Please enter the number of years of experience \n| ')
       print('-------------------------------------------------------')
   
       e.extend([name, reg_num, role, sal, exp])
       employee.append(e)
     print(employee) 
   
-  if n=='2':
-    num = input('Enter the registration number | ')
-    for i in employee:
-      if employee[int(i)][2] == num:
-        employee.pop(employee[i][2])
-  
-  if n=='3':
+  elif n=='2':
     num = input('Enter the registration number \n| ')
-    nrole = input('Enter the new role | ')
-    for i in employee:
-      if employee[int(i)][2] == num:
-        employee[int(i)][3] == nrole
+    for i in range(0,len(employee)):
+      if employee[i][1] == num:
+        employee.pop(i)
+      print(employee)
+  
+  elif n=='3':
+    num = input('Enter the registration number \n| ')
+    nrole = input('Enter the new role \n| ')
+    for i in (0,len(employee)):
+      if employee[i][1] == num:
+        employee[i][2] == nrole
+      print(employee)
+  
+  elif n=='4':
+    num = input("Enter the registration number \n| ")
+    nsal = input("Enter the new salary \n| ")
+    for i in (0,len(employee)):
+      if employee[i][1] == num:
+        employee[i][3] == nsal
+      print(employee)
+
+  elif n=='5':
+    print(employee)
+
+  elif n=='6':
+    break
     
+  n=input('| ')
+ 

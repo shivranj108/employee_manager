@@ -15,12 +15,13 @@ while n!='6': #Main Loop for the program to run until the client chooses 6
   
     for i in range(n):
       e = []
-      name = input('Please enter the name of the employee \n| ')
       reg_num = input('Please enter the employee\'s registration number \n| ')
+      name = input('Please enter the name of the employee \n| ')
+      dob = input('Please enter the date of birth \n| ')
+      doj = input('Please enter the date of joining \n| ')
+      exp = input('Please enter the number of years of experience \n| ')
       role = input('Please enter the employee\'s role \n| ')
       sal = input('Please enter the employee\'s salary \n| ')
-      exp = input('Please enter the number of years of experience \n| ')
-      doj = input('Please enter the date of joining \n| ')
       print('-------------------------------------------------------')
   
       e.extend([name, reg_num, role, sal, exp])

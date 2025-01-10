@@ -3,7 +3,7 @@ employee = []
 # Acyuta, 1324, CEO, $7,000,000, 20 years - This is how one entry of the list is supposed to work
 
 #Query 1
-print("Add employee - 1\nRemove employee - 2\nChange role - 3\nChange salary - 4\nPrint list - 5\nExit - 6")
+print("| Add employee - 1 \n| Remove employee - 2 \n| Change role - 3 \n| Change salary - 4 \n| Print list - 5 \n| Exit - 6 |")
 n = input('| ')
 
 while n!='6': #Main Loop for the program to run until the client chooses 6
